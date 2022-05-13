@@ -18,4 +18,16 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  paths: {
+    artifacts: "./src/artifacts",
+  },  // The path where to store the artifacts
+  networks: {
+    hardhat: {
+      chainId: 1337,
+    },
+    rinkeby: {  // The network to deploy to by default  (optional)  
+      url: "https://rinkeby.infura.io/v3/c61ac3ab1cb84b659dca0847ccc921ac",
+      accounts: ['ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80'],
+    },  
+  },
 };
